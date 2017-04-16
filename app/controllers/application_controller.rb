@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
 
   def current_user
     return unless session[:user_id]
-    # ログインしているユーザ情報を返す　||=って何だ？
+    # ログインしているユーザ情報を返す
     @current_user ||= User.find(session[:user_id])
   end
 
